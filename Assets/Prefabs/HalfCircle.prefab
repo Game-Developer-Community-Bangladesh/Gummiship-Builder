@@ -147,3 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e2b438ecc2fee4e9bb66c51ec86b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shapeName: Half Circle
+  initialScale: {x: 0, y: 0, z: 0}
+  animationDuration: 1

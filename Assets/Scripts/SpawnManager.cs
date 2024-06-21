@@ -1,15 +1,18 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class SpawnManager : MonoBehaviour
 {   
     public static SpawnManager instance;
 
+    public TextMeshProUGUI shapeNameText;
     public List<GameObject> prefabObjects = new List<GameObject>();
     private List<GameObject> TempObjects = new List<GameObject>();
     public Transform spawnPosition;
-
+   
     public void Awake()
     {   
         if (instance == null) instance = this;
@@ -17,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     }
     void Start()
     {   
-        SpawnObject();
+      SpawnObject();
 
     }
 
@@ -30,7 +33,13 @@ public class SpawnManager : MonoBehaviour
             TempObjects.Clear();
         }
         int randomIndex = Random.Range(0, prefabObjects.Count);
-        Instantiate(prefabObjects[randomIndex], spawnPosition.position, prefabObjects[randomIndex].transform.rotation);
+        var instantiatedObject = Instantiate(prefabObjects[randomIndex], spawnPosition.position, prefabObjects[randomIndex].transform.rotation);
+
+        UIManger.Instance.DisplayShapeName(instantiatedObject.GetComponent<ObjectMover>().shapeName);
+
+        instantiatedObject.GetComponent<ObjectMover>()?.GetInitialScale();
+        instantiatedObject.GetComponent<ObjectMover>()?.ScaleUp();
+
         TempObjects.Add(prefabObjects[randomIndex]);
         prefabObjects.RemoveAt(randomIndex);
     }

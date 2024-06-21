@@ -133,7 +133,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.0028495751, y: 0.0028495747, z: 0.0028495747}
-  m_Center: {x: 0, y: -5.820765e-11, z: -4.135903e-25}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4706148713419844793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e2b438ecc2fee4e9bb66c51ec86b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
+  rotationMultiplier: 10
+  animationDuration: 1
+  shapeName: Cube
+  initialScale: {x: 0, y: 0, z: 0}

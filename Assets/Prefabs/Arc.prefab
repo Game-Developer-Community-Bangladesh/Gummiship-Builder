@@ -94,7 +94,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4869728719333580949}
   serializedVersion: 4
-  m_Mass: 6
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -132,8 +132,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0054236697, y: 0.0009709532, z: 0.0013341154}
-  m_Center: {x: 0.0000000016243343, y: 0.001379972, z: -5.9604643e-10}
+  m_Size: {x: 0.0054236697, y: 0.0010253504, z: 0.0013341154}
+  m_Center: {x: -1.6625546e-12, y: 0.0012976312, z: -0}
 --- !u!114 &6843381130348759835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e2b438ecc2fee4e9bb66c51ec86b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shapeName: Arc
+  initialScale: {x: 0, y: 0, z: 0}
+  animationDuration: 1
